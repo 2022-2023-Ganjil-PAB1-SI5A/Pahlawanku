@@ -38,6 +38,7 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.ClassViewHolde
                 .load(pahlawan.getFoto())
                 .centerCrop()
                 .into(holder.ivFoto);
+        
     }
 
     @Override
