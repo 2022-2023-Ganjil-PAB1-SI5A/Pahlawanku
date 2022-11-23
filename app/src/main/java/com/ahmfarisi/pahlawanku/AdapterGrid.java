@@ -34,13 +34,12 @@ public class AdapterGrid extends RecyclerView.Adapter<AdapterGrid.ClassViewHolde
     @Override
     public void onBindViewHolder(@NonNull ClassViewHolder holder, int position) {
         ModelPahlawan pahlawan = dataPahlawan.get(position);
-        holder.tvNama.setText(pahlawan.getNama());
-        holder.tvTentang.setText(pahlawan.getTentang());
+
         Glide
                 .with(ctx)
                 .load(pahlawan.getFoto())
                 .centerCrop()
-                .into(holder.ivFoto);
+                .into(holder.ivGrid);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
